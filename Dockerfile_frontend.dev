@@ -1,0 +1,23 @@
+FROM node:18.12.1-alpine3.14
+
+# Set working directory
+WORKDIR /app
+
+# Copy package files
+COPY package.json ./
+
+# Install dependencies
+RUN npm install --production
+
+# Copy project files
+COPY . .
+
+# Set environment variables
+ENV NODE_ENV=development
+ENV PORT=8080
+
+# Expose ports
+EXPOSE 8080
+
+# Start the development server
+CMD ["npm", "start"]
