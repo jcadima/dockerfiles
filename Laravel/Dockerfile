@@ -1,4 +1,4 @@
-FROM "php:8.1.0-fpm"
+FROM "php:8.2.0-fpm"
  
 # Arguments defined in docker-compose.yml
 ARG user=admin
@@ -12,8 +12,7 @@ RUN apt-get update && apt-get install -y \
     libonig-dev \
     libxml2-dev \
     zip \
-    unzip \
-    vim
+    unzip
  
 # Clear cache
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
