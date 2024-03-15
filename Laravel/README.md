@@ -1,4 +1,4 @@
-### Make sure to create the following directoriy and file:
+### Make sure to create the following directory and file:
 ```
 /docker-compose/nginx/laravel.conf
 ```
